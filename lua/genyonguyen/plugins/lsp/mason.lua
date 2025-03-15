@@ -28,7 +28,7 @@ return {
       -- list of servers for mason to install
       ensure_installed = {
         "lua_ls",
-        --"ruff_lsp",
+        "tailwindcss",--"ruff_lsp",
         "pyright",
         "clangd",
         "html",
