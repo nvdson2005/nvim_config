@@ -29,6 +29,10 @@ return {
     build = "make tiktoken", -- Only on MacOS or Linux
     opts = {
       -- See Configuration section for options
+      window = {
+        width = 0.35,
+      },
+      show_help = true,
     },
 
     -- use default configuration instead, more in https://github.com/CopilotC-Nvim/CopilotChat.nvim?tab=readme-ov-file#sticky-prompts
