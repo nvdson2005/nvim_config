@@ -28,13 +28,13 @@ return {
       -- list of servers for mason to install
       ensure_installed = {
         "lua_ls",
-        "tailwindcss",--"ruff_lsp",
+        "tailwindcss", --"ruff_lsp",
         "pyright",
         "clangd",
         "html",
         "cssls",
         "ts_ls",
-     },
+      },
       -- auto-install configured servers (with lspconfig)
       automatic_installation = true, -- not the same as ensure_installed
     })
@@ -46,6 +46,8 @@ return {
         --"ruff",
         "ts_ls",
         "eslint-lsp",
+        "shellcheck",
+        "shellharden",
       },
     })
   end,

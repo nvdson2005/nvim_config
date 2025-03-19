@@ -34,7 +34,6 @@ return {
       },
       show_help = true,
     },
-
     -- use default configuration instead, more in https://github.com/CopilotC-Nvim/CopilotChat.nvim?tab=readme-ov-file#sticky-prompts
     -- See Commands section for default commands if you want to lazy load on them
     -- config=function ()
