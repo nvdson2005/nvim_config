@@ -43,8 +43,12 @@ map('n', '<A-c>', '<Cmd>BufferClose<CR>', opts)
 --                 :BufferCloseAllButCurrentOrPinned
 --                 :BufferCloseBuffersLeft
 --                 :BufferCloseBuffersRight
+
+
+
 -- Magic buffer-picking mode
 map('n', '<C-p>', '<Cmd>BufferPick<CR>', opts)
+
 -- Sort automatically by...
 map('n', '<Leader>bb', '<Cmd>BufferOrderByBufferNumber<CR>', opts)
 map('n', '<Leader>bn', '<Cmd>BufferOrderByName<CR>', opts)
