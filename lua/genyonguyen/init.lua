@@ -3,6 +3,7 @@ require("genyonguyen.config.remap")
 require("genyonguyen.config.lazy")
 require("genyonguyen.config.tab")
 require("genyonguyen.plugins.copilot")
+require("genyonguyen.plugins.copilot-suggestion")
 
 -- (Don't know why: Press <C-p> in insert mode to open code suggestions)
 -- When in code suggestion, use <C-n> to navigate down, <C-p> to navigate up, <C-y> to select the current suggestion
