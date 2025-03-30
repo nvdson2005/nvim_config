@@ -124,6 +124,29 @@ return {
       on_attach = on_attach,
     })
 
+    -- configure java server
+    lspconfig["java_language_server"].setup({
+      cmd = { "java-language-server" }, -- Path to the Java Language Server executable
+      capabilities = capabilities,
+      on_attach = on_attach,
+      root_dir = lspconfig.util.root_pattern(".git", "pom.xml", "build.gradle"), -- Detect project root
+      settings = {
+        java = {
+          format = {
+            enabled = true, -- Enable formatting
+            settings = {
+              url = "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml", -- Example style guide
+            },
+          },
+          completion = {
+            favoriteStaticMembers = {
+              "java.util.Objects.requireNonNull",
+              "java.util.Optional.ofNullable",
+            },
+          },
+        },
+      },
+    })
     lspconfig["eslint"].setup({
       --- ...
       capabilities = capabilities,
