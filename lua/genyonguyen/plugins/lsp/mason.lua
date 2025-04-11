@@ -35,6 +35,7 @@ return {
         "cssls",
         "ts_ls",
         "java_language_server",
+        "jsonls",
       },
       -- auto-install configured servers (with lspconfig)
       automatic_installation = true, -- not the same as ensure_installed

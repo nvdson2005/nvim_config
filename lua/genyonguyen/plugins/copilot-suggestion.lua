@@ -7,10 +7,10 @@ return {
       suggestion = {
         auto_trigger = true,
         keymap = {
-          accept = "<Tab>",
-          -- next = "<C-d>",
-          -- prev = "<C-a>",
-          -- dismiss = "<C-~>",
+          accept = "<C-s>",
+          next = "<C-d>",
+          prev = "<C-a>",
+          dismiss = "<C-~>",
         },
       },
       panel = { enabled = false }, -- Disable side panel

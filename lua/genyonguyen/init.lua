@@ -5,6 +5,59 @@ require("genyonguyen.config.tab")
 require("genyonguyen.plugins.copilot")
 require("genyonguyen.plugins.copilot-suggestion")
 
+-- The vim diagnostic is disappeared suddenly. So this is used to manually configure it
+vim.diagnostic.config({
+  virtual_text = {
+    spacing = 4,
+    wrap = true,  -- Wrap long virtual text
+  }
+})
+
+vim.diagnostic.config({
+  signs = true,         -- Show signs in the sign column
+  underline = true,     -- Underline diagnostic issues
+  update_in_insert = false,  -- Don't show diagnostics while typing
+  severity_sort = true, -- Sort diagnostics by severity
+})
+vim.diagnostic.open_float(nil, { focusable = false, border = "rounded" })
+vim.diagnostic.config({
+  float = {
+    border = "rounded",
+    focusable = false,
+    source = "always",
+    format = function(diagnostic)
+      return string.format("%s (%s)", diagnostic.message, diagnostic.source)
+    end,
+    wrap = true,  -- Enable line wrapping
+    width = 80,   -- Adjust width to fit more text
+  },
+})
+
+vim.diagnostic.config({
+  severity = {
+    min = vim.diagnostic.severity.HINT,  -- Ensure all severities are displayed
+  }
+})
+
+-- Change diagnostic signs
+vim.diagnostic.config({
+  signs = {
+    text = {
+      [vim.diagnostic.severity.ERROR] = " ",
+      [vim.diagnostic.severity.WARN] = " ",
+      [vim.diagnostic.severity.INFO] = "󰠠 ",
+      [vim.diagnostic.severity.HINT] = " ",
+    },
+  },
+})
+-- Uncomment this if you want to disable the swap file
+-- vim.api.nvim_create_autocmd("FileType", {
+--   pattern = "*",
+--   callback = function()
+--     vim.opt_local.swapfile = false
+--   end,
+-- })
+
 -- (Don't know why: Press <C-p> in insert mode to open code suggestions)
 -- When in code suggestion, use <C-n> to navigate down, <C-p> to navigate up, <C-y> to select the current suggestion
 
@@ -35,3 +88,5 @@ vim.keymap.set("n", "<C-o>", function()
     vim.lsp.buf.format()
     print("Code formatted successfully!")
 end, {})
+
+-- Keymap <C-f> and <C-b> can be used in normal mode to quickly navigate in the buffer

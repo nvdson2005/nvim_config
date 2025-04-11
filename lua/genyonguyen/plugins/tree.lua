@@ -26,7 +26,8 @@ return {
         group_empty = true,
       },
       filters = {
-        dotfiles = true,
+        -- show dotfiles in tree
+        dotfiles = false,
       },
     })
     local keymap = vim.keymap -- for conciseness
