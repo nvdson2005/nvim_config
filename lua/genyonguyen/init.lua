@@ -4,7 +4,12 @@ require("genyonguyen.config.lazy")
 require("genyonguyen.config.tab")
 require("genyonguyen.plugins.copilot")
 require("genyonguyen.plugins.copilot-suggestion")
-
+--Keymaps for Telescope (moved into telescope.lua)
+--Keymaps for LSP
+vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
+vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, {})
+vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, {})
+vim.keymap.set('n', 'gr', vim.lsp.buf.references, {})
 -- The vim diagnostic is disappeared suddenly. So this is used to manually configure it
 vim.diagnostic.config({
   virtual_text = {
