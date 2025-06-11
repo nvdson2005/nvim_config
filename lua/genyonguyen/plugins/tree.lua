@@ -28,6 +28,8 @@ return {
       filters = {
         -- show dotfiles in tree
         dotfiles = false,
+        -- hide git ignored file
+        git_ignored = false,
       },
     })
     local keymap = vim.keymap -- for conciseness
